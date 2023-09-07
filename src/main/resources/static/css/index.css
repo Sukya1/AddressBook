@@ -1,0 +1,28 @@
+body { 
+	background-color: aliceblue;
+	background-repeat: no-repeat;
+	background-size: auto;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#searchbar {
+	text-align: center;
+	font-size: 50px;
+	padding-top: 20vh;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#searchbar .form-control, #searchbar input {
+	border-radius: 30px;
+	width: 50%;
+	font-size: large;
+	color:black;
+	visibility: visible;
+}
+.form-control {
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	margin-bottom: 20px;
+}

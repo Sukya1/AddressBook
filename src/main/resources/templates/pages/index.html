@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+	<head>
+		<div th:replace="~{fragments/styling::head-style}"></div>
+	</head> 
+	<body>
+		<div th:replace="~{fragments/navbar}"></div>
+		<div id="searchbar">
+		<form action="#" th:action="@{/createAction}" method="post">
+		<select class="form-control input-lg text-center center-block" name="selectedVal">
+			<option selected value=" What do you want to do?"> What do you want to do?</option>
+    		<option th:each="option:${optionList}" th:text="${option}" th:value="${option}"></option>
+		</select>
+		<button type="submit" class="btn btn-primary">--></button>
+		</form>
+		</div> 
+		<div th:replace="~{fragments/styling::scripts}"></div>
+	</body>
+</html>

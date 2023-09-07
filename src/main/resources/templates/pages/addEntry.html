@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+	<head>
+		<div th:replace="~{fragments/styling::head-style}"></div>
+	</head> 
+	<body>
+		<div th:replace="~{fragments/navbar}"></div>
+		
+		<form th:action="@{/savePerson}" th:object="${person}" method="post">
+	 		<div class="form-group">
+				 <label for="firstName">First Name: </label>
+	 			<input type="text" id="firstName" class="form-control" placeholder="eg.Jane..." th:if="${person != null}" th:field="*{firstName}" />
+	 		</div>
+	 		<div class="form-group">
+				 <label for="LastName">Last Name: </label>
+	 			<input type="text" id="LastName" class="form-control" placeholder="eg.Jane..." th:if="${person != null}" th:field="*{lastName}" />
+	 		</div>
+	 		
+	 		<div class="form-group">
+				  <label for="phoneNumber">Enter your mobile number:</label>
+	 			<input type="text" id="phoneNumber" class ="form-control" placeholder="eg.1914353456" th:if="${person != null}" th:field="*{phoneNumber}"/>
+	 		</div>
+	 		<div class="form-group">
+				  <label for="emailAddress">Enter your email address: </label>
+	 			<input type="text" id="emailAddress" class ="form-control" placeholder="eg.doe@sas.upenn.edu" th:if="${person != null}" th:field="*{emailAddress}" />
+	 		</div>
+	 		
+	 		<div class="form-group">
+				  <label for="homeAddress">Enter your home address: </label>
+	 			<input type="text" id="homeAddress" class ="form-control" placeholder="eg.Jane St Brooklyn NY 1289" th:if="${person != null}" th:field="*{homeAddress}"/>
+	 		</div>
+	 		<button class="btn btn-primary">Add Entry</button>
+		</form>
+		<div th:replace="~{fragments/styling::scripts}"></div>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+	<head>
+		<div th:replace="fragments/styling::head-style"></div>
+	</head> 
+	<body>
+		<div th:replace="fragments/navbar"></div>
+		<div id="searchbar">
+		<form action="#" th:action="@{/getEmail}" method="post">
+		<select class="form-control input-lg text-center center-block">
+			<option selected value=" What do you want to do?"> Search for an Entry</option>
+		</select>
+		<input name="selectedVal" id="email" type="text" class="form-control text-center center-block input-lg" placeholder="eg.doe@gmail.com">
+		<button type="submit" class="btn btn-primary">--></button>
+		</form>
+		<a th:href="@{/}"><button class="btn btn-primary"><--</button></a>
+		</div> 
+		<div th:replace="fragments/styling::scripts"></div>
+	</body>
+</html>
