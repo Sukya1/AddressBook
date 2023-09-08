@@ -25,7 +25,7 @@ public class EntryController {
 	
 	@GetMapping(value = "/")
 	public String Home() {
-		return "pages/index";
+		return "/pages/index";
 	}
 	
 	@ModelAttribute()
@@ -51,16 +51,16 @@ public class EntryController {
 	public String createAction(@RequestParam("selectedVal") String task, Model model) {
 		 model.addAttribute("person", new Entry());
 		if (task.equals("Add an Entry")) {
-			return "pages/addEntry";
+			return "/pages/addEntry";
 		} else if (task.equals("Remove an Entry")) {
-			return "pages/addressBook";
+			return "/pages/addressBook";
 		} else if (task.equals("Search for an Entry")) {
-			return "pages/search";
+			return "/pages/search";
 		} else if (task.equals("See Address Book")) {
-			return "pages/addressBook";
+			return "/pages/addressBook";
 		} else if (task.equals("Clear Address Book")) {
 			entryRepository.deleteAll();
-			return "pages/index";
+			return "/pages/index";
 		} else {
 			return "/pages/index";
 		}
@@ -85,7 +85,7 @@ public class EntryController {
 	        entryRepository.deleteById(id);
 	        return "/pages/index";
 	    }
-	 @PostMapping("/getEmail")
+	 @PostMapping(value = "/getEmail")
 		public String searchbyemail(@RequestParam("selectedVal") String email, Model model) {
 		 for (Entry ent: entryRepository.findAll()) {
 			 if (ent != null && ent.getEmailAddress() != null && ent.getEmailAddress().equals(email)) {
