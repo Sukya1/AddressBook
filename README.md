@@ -12,8 +12,7 @@ about 7 - 9 hrs (had a few interesting bugs that I had to work through)
 
 ## Details of Project 
 
-I made an attempt to deploy with Heroku, however, it caused my program to crash so I recorded a video 
-here: https://drive.google.com/file/d/1TleIKgnAtAQFUODc_B0E8bhIAdFzsA8f/view?usp=sharing 
+Video Demo: https://drive.google.com/file/d/1TleIKgnAtAQFUODc_B0E8bhIAdFzsA8f/view?usp=sharing 
 
 If you would like to run the program on your own: 
 1. Download Spring Boot Tools from: https://spring.io/tools
